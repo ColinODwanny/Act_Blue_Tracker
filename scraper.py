@@ -21,8 +21,5 @@ def getData():
 
     return my_dict
 
-
-print(getData())
-
     
  
