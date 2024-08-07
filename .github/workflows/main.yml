@@ -22,4 +22,12 @@ jobs:
           python -m pip install pytz
           python Writer.py
 
+
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: Auto Updated
+          file_pattern: ActBlue.csv
+
 # meep
