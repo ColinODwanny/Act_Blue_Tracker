@@ -18,6 +18,7 @@ jobs:
 
       - name: Run Python Script
         run: 
+          python -m pip install requests
           python Writer.py
 
 # meep
