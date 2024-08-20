@@ -2,7 +2,7 @@ name: Get Data
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   run-python:
