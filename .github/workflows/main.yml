@@ -25,11 +25,11 @@ jobs:
           python Writer.py
 
 
- #     - name: Commit Changes
-  #      uses: stefanzweifel/git-auto-commit-action@v5
-   #     with:
-         # branch: main
-    #      commit_message: Auto Updated
-     #     file_pattern: ActBlue.csv
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: Auto Updated
+          file_pattern: ActBlue.csv
 
 # meep
