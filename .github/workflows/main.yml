@@ -6,6 +6,8 @@ on:
 jobs:
   run-python:
     runs-on: ubuntu-latest
+    outputs:
+      commit_hash: ${{ steps.auto-commit-action.outputs.commit_hash }}
 
     steps:
       - name: Checkout code
