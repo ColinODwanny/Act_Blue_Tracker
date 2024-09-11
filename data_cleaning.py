@@ -34,4 +34,7 @@ def read_and_clean():
     monthlyMinMax['monthly_total'] = monthlyMinMax['monthly_max'] - monthlyMinMax['monthly_min']
     monthlyMinMax['month'] = monthlyMinMax.index
 
+    fig = px.bar(dailyMinMaxDF, x = "day", y = "daily_total")
+    fig.write_html(Daily_Tracker.html)
+
     return [dailyMinMax, monthlyMinMax]
