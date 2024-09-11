@@ -1,6 +1,5 @@
 import pandas as pd
 import plotly.express as px
-from dash import Dash
 
 #returns a list.  index 0 is the daily DataFrame, index 1 is the monthly DataFrame
 def read_and_clean():
