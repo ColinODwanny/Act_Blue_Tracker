@@ -14,8 +14,9 @@ def read_and_clean():
     masterDF['day'] = masterDF['Datetime'].dt.date
     dailyMinDF = masterDF.groupby('day').min()
     dailyMaxDF = masterDF.groupby('day').max()
-    dailyMinDF.rename(columns = {' Amount':'daily_min'}, inplace = True)
-    dailyMaxDF.rename(columns = {' Amount':'daily_max'}, inplace = True)
+    #changed ' Amount' to 'Amount' in next two lines
+    dailyMinDF.rename(columns = {'Amount':'daily_min'}, inplace = True)
+    dailyMaxDF.rename(columns = {'Amount':'daily_max'}, inplace = True)
     dailyMinMax = pd.DataFrame(data = [dailyMaxDF['daily_max'], dailyMinDF['daily_min']])
     dailyMinMax = dailyMinMax.transpose()
     dailyMinMax['daily_total'] = dailyMinMax['daily_max'] - dailyMinMax['daily_min']
