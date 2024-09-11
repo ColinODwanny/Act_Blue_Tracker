@@ -42,12 +42,20 @@ jobs:
           python data_cleaning.py
 
 
-      - name: Commit Changes
+      - name: Commit Changes to Daily
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           branch: main
           commit_message: Auto Updated
           file_pattern: Daily_Tracker.html
+          
+
+      - name: Commit Changes to Monthly
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: Auto Updated
+          file_pattern: Monthly_Tracker.html
 
           
 
