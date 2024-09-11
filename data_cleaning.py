@@ -38,6 +38,9 @@ def read_and_clean():
     fig = px.bar(dailyMinMax, x = "day", y = "daily_total")
     fig.write_html("Daily_Tracker.html")
 
+    fig = px.bar(monthlyMinMax, x = "month", y = "monthly_total")
+    fig.write_html("Monthly_Tracker.html")
+
     return [dailyMinMax, monthlyMinMax]
 
 read_and_clean()
