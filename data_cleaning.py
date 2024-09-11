@@ -38,3 +38,5 @@ def read_and_clean():
     fig.write_html(Daily_Tracker.html)
 
     return [dailyMinMax, monthlyMinMax]
+
+read_and_clean()
