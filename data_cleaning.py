@@ -27,8 +27,9 @@ def read_and_clean():
     masterDF['month'] = masterDF['Datetime'].dt.month
     monthlyMinDF = masterDF.groupby('month').min()
     monthlyMaxDF = masterDF.groupby('month').max()
-    monthlyMinDF.rename(columns = {' Amount':'monthly_min'}, inplace = True)
-    monthlyMaxDF.rename(columns = {' Amount':'monthly_max'}, inplace = True)
+    #changed ' Amount' to 'Amount in next two lines
+    monthlyMinDF.rename(columns = {'Amount':'monthly_min'}, inplace = True)
+    monthlyMaxDF.rename(columns = {'Amount':'monthly_max'}, inplace = True)
     monthlyMinMax = pd.DataFrame(data = [monthlyMaxDF[ 'monthly_max'], monthlyMinDF['monthly_min']])
     monthlyMinMax = monthlyMinMax.transpose()
     monthlyMinMax['monthly_total'] = monthlyMinMax['monthly_max'] - monthlyMinMax['monthly_min']
