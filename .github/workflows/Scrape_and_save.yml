@@ -47,7 +47,7 @@ jobs:
         with:
           branch: main
           commit_message: Auto Updated
-          file_pattern: Daily_Tracker.html
+          file_pattern: index.html
           
 
       - name: Commit Changes to Monthly
