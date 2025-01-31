@@ -7,7 +7,7 @@ def read_and_clean():
     #loading and making data useable
 
     masterDF = pd.read_csv("ActBlue.csv")
-    masterDF['Datetime'] = pd.to_datetime(masterDF['Datetime'])
+    masterDF['Datetime'] = pd.to_datetime(masterDF['Datetime'], utc=True)
 
     #aggrigating data by each day to then find daily fundrasing totals
 
